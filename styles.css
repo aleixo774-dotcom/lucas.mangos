@@ -6,4 +6,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;bac
 .portrait-crop{width:100%;height:100%;border:4px solid var(--bg);border-radius:50%;overflow:hidden}.portrait .portrait-crop img{border:0;border-radius:0;transform:scale(2.2);transform-origin:50% 55%;object-position:50% 57%}
 
 /* Enquadramento da nova foto: rosto centralizado, com ombros visíveis. */
-.portrait .portrait-crop img{transform:scale(3.8);transform-origin:47.8% 42%;object-position:50% 50%}
+.portrait .portrait-crop img{transform:scale(2.7);transform-origin:47.5% 41%;object-position:50% 50%}
+
+/* Renderiza a foto no tamanho final, sem ampliar uma camada pequena. */
+.portrait-crop{position:relative}.portrait .portrait-crop img{position:absolute;width:270%;height:270%;max-width:none;left:-80.75%;top:-69.7%;transform:none;object-fit:cover;object-position:50% 50%}
